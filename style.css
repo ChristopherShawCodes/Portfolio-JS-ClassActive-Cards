@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,100;0,400;0,700;1,300;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0 auto;
+    font-family: 'Muli','sans-serif';
+    display: inline-flexbox;
+    height: 100vh;
+    margin-top: 3%;
+    margin-left:4%;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    background-color: #FFFEFD;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.4s ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    opacity: 0;
+    color: silver;
+    font-weight: 100;
+}
+
+.panel.active{
+    flex: 5;
+    box-shadow: 2px 2px 4px 1px orange;
+}
+
+.panel.active h3{
+    opacity: 0.9;
+    transition: opacity 0.6s ease-in 0.7s
+
+}
+
+@media(max-width: 500px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4), 
+    .panel:nth-of-type(5){
+        display: none;
+    }
+
+}
+
+.footer{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 2rem;
+    color: silver;
+    width: 100%;
+    position: fixed;
+}
+
+.logo{
+    margin: 4px;
+    color: #6693C1;
+}
+
+.icon{
+    width: 5%;
+}
